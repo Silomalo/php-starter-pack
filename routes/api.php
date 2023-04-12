@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['cors'])->group(
-    function () {
-        Route::get('/posts', 'App\Http\Controllers\PostController@index');
-        Route::post('/posts', 'App\Http\Controllers\PostController@store');
-    }
-);
+// Route::middleware(['cors'])->group(
+//     function () {
+Route::get('/users', 'App\Http\Controllers\UserController@index');
+Route::POST('/addUser', 'App\Http\Controllers\UserController@store');
+//     }
+// );
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
