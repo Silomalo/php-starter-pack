@@ -2,15 +2,13 @@
 
 return [
 
-
-
-    'paths' => ['api/*', 'sanctum/*', 'login', 'logout'],
+    'paths' => ['api/*', 'api/addUser', '*', 'sanctum/csrf-cookie', '/login', 'otp/*', '/logout'],
 
     'allowed_methods' => ['*'],
 
     'allowed_origins' => ['*'],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => ['http://localhost:3000'],
 
     'allowed_headers' => ['*'],
 
